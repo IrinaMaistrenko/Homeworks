@@ -18,7 +18,6 @@ public class Task_1_1_1 {
             System.out.print(i + " * ");
             }
         System.out.print(n + " = " + new DecimalFormat("#,###,###,###,###,###,###").format(f));
-        //System.out.print(new DecimalFormat("#,###,###,###,###,###,###").format(f));
       }
     }
     /*Вариант решения 2: с сохранением значений вычисленных факториалов в массив. На одном ресурсе прочитала, что такой метод
