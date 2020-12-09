@@ -8,7 +8,7 @@ public class Task4 {
         System.out.println(day1);
     }
 
-    private static String Sleeplne(boolean day) {
+    static String Sleeplne(boolean day) {
         boolean weekday = true;
         boolean vacation = false;
         if (day == weekday) {
