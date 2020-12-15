@@ -3,7 +3,6 @@ package HomeWork2.arrays;
 import java.text.DecimalFormat;
 
 public class Task_1_1_2 {
-    /*Интересно, а можно в System.out.print этот for запихнуть?..Чисто теоретически?*/
     public static void main(String[] args) {
         for (String arg : args) {
             long n = Long.parseLong(arg); //Использовала foreach для обрабатки аргумента, переданного в программу (как у Вас на видео)

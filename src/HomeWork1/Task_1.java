@@ -1,5 +1,5 @@
 package HomeWork1;
-public class Task1 {
+public class Task_1 {
     public static void main(String[] args) {
         int a = 42;
         int b = 15;
@@ -12,27 +12,23 @@ public class Task1 {
         String bin_b = String.format("%8s", Integer.toBinaryString(b)).replace(' ', '0');
         System.out.println("Двоичный формат числа" + " " + b + ":");
         System.out.println(bin_b);
-        String bin_c = String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
         System.out.println("Двоичный формат числа" + " " + c + ":");
+        String bin_c = String.format("%8s", Integer.toBinaryString(c & 0xFF)).replace(" ", "0");
         System.out.println(bin_c);
-        System.out.println("Как представить полученное двоичное 32-х битное" + " " + bin_c + " " + "в виде 8-и битного - поищу-подумаю на выходных, пока ничего умнее,чем просто обрезать слева в голову не пришло :(");
-        String bin_d = String.format("%8s", Integer.toBinaryString(d)).replace(' ', '0');
+        String bin_d = String.format("%8s", Integer.toBinaryString(d & 0xFF)).replace(' ', '0');
         System.out.println("Двоичный формат числа" + " " + d + ":");
         System.out.println(bin_d);
-        System.out.println("Тут история насчет представления в виде 8-и бит аналогичная предыдущей...");
-        String Bin_e = "";
         long numberBits = Double.doubleToLongBits(e);
-        Bin_e = Long.toBinaryString(numberBits);
+        String Bin_e = Long.toBinaryString(numberBits);
         System.out.println("Двоичный формат числа" + " " + e + ":");
-        System.out.println(e > 0 ? "0" + Bin_e : Bin_e);
-        System.out.println("И тут тоже насчет представления в виде 8-и бит аналогично...");
+        System.out.println(Bin_e);
         System.out.println();
         System.out.println("Теперь побитовые операции с указанными выше числами:");
 
         int a1 = ~a;
-        System.out.println("Побитовое унарное отрицание (NOT) числа 42 дает: " + Integer.toBinaryString(a1) + " ");
+        System.out.println("Побитовое унарное отрицание (NOT) числа 42 дает: " + Integer.toBinaryString(a1 & 0xFF) + " ");
         int b1 = ~b;
-        System.out.println("Побитовое унарное отрицание (NOT) числа 15 дает: " + Integer.toBinaryString(b1) + " ");
+        System.out.println("Побитовое унарное отрицание (NOT) числа 15 дает: " + Integer.toBinaryString(b1 & 0xFF) + " ");
         int c1 = ~c;
         System.out.println("Побитовое унарное отрицание (NOT) числа -42 дает: " + Integer.toBinaryString(b1) + " ");
         int d1 = ~d;
