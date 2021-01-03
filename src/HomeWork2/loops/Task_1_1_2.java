@@ -1,4 +1,4 @@
-package HomeWork2.arrays;
+package HomeWork2.loops;
 
 import java.text.DecimalFormat;
 

@@ -1,8 +1,6 @@
-package HomeWork2.arrays;
+package HomeWork2.loops;
 
 import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Task_1_1_1 {
     //Вариант решения 1:
