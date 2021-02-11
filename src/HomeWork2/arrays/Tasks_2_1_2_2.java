@@ -24,7 +24,7 @@ public class Tasks_2_1_2_2 {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите длину массива: ");
         int size = in.nextInt(); // Считываем с консоли введенный размер массива и записываем его в size
-        int container[] = new int[size]; // Создаём массив размером size
+        int[] container = new int[size]; // Создаём массив размером size
         System.out.print("Введите элементы массива:");
         for (int i = 0; i < size; i++) {
             container[i] = in.nextInt(); // Заполняем массив элементами, считанными с консоли

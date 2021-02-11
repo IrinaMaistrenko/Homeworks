@@ -24,7 +24,7 @@ public class Tasks_2_3_2_4 {
 
     public static int[] arrayRandom(int size, int maxValueExclusion) {
 
-        int container[] = new int[size];
+        int[] container = new int[size];
 
 
         for (int i = 0; i < size; i++) {

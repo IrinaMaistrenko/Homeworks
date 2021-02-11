@@ -49,7 +49,7 @@ public abstract class SiteLoader {
         } while(error && retryCount < 5);
 
         if (error) {
-            throw new RuntimeException("Неполучилось загрузить курсы валют");
+            throw new RuntimeException("Не получилось загрузить курсы валют");
         } else {
             return this.handle(content.toString(), currencyName);
         }
@@ -59,26 +59,29 @@ public abstract class SiteLoader {
 
     protected abstract double handle(String var1, SiteLoader.Currency var2);
 
-    public static enum Currency {
-        USD("145", "840"),
-        EUR("292", "978"),
-        RUB("298","643");
+    public enum Currency {
+        USD("145"/*,"933"*/),
+        EUR("292"/*, "933"*/),
+        RUB("298"/*,"933"*/);
 
-        private String id;
-        private String code;
+        private final String id;
+        //private String code;
 
 
-        private Currency(String id, String code) {
+
+        Currency(String id/*,String code*/) {
             this.id = id;
-            this.code = code;
+            //this.code = code;
+
         }
 
         public String getId() {
             return this.id;
         }
-        public String getCode() {
+
+        /*public String getCode() {
             return this.code;
-        }
+        }*/
     }
 
 

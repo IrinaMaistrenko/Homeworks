@@ -10,8 +10,10 @@ public class NBRBLoader extends SiteLoader {
 
     protected double handle(String content, Currency currencyName) {
         String field = "\"Cur_OfficialRate\"";
-        String rate = content.substring(content.indexOf(field) + 19, content.lastIndexOf("}"));
+        String rate = content.substring(content.indexOf(field) + field.length() + 1, content.indexOf(field)+field.length()+7);
+
         double currentrate = Double.parseDouble(rate);
+        System.out.println("курсы нбрб "+currentrate);
         return currentrate;
     }
 }

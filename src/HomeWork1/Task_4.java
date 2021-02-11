@@ -11,10 +11,6 @@ public class Task_4 {
     }
 
     public static boolean sleepLn(boolean weekday, boolean vacation) {
-        if (weekday != true || vacation == true) {
-            return true;
-        } else {
-            return false;
-        }
+        return weekday != true || vacation == true;
     }
 }
