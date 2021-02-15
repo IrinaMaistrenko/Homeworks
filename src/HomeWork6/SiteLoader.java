@@ -55,33 +55,25 @@ public abstract class SiteLoader {
         }
     }
 
-    public abstract double load(SiteLoader.Currency var1);
+    public abstract double load(SiteLoader.Currency currencyName, String date);
 
-    protected abstract double handle(String var1, SiteLoader.Currency var2);
+    protected abstract double handle(String content, SiteLoader.Currency currencyName);
 
     public enum Currency {
-        USD("145"/*,"933"*/),
-        EUR("292"/*, "933"*/),
-        RUB("298"/*,"933"*/);
+        USD("145"),
+        EUR("292"),
+        RUB("298");
 
-        private final String id;
-        //private String code;
+        private String id;
 
-
-
-        Currency(String id/*,String code*/) {
+        Currency(String id) {
             this.id = id;
-            //this.code = code;
-
         }
 
         public String getId() {
             return this.id;
         }
 
-        /*public String getCode() {
-            return this.code;
-        }*/
     }
 
 

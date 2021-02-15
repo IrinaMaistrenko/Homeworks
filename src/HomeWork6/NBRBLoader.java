@@ -4,8 +4,8 @@ public class NBRBLoader extends SiteLoader {
     public NBRBLoader() {
     }
 
-    public double load(Currency currencyName) {
-        return this.load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId(), currencyName);
+    public double load(Currency currencyName, String date) {
+        return this.load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId()+ "?ondate=" + date, currencyName);
     }
 
     protected double handle(String content, Currency currencyName) {
